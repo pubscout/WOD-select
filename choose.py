@@ -2,8 +2,10 @@
 
 import random
 
-#wods = open("WODS.txt").readlines()
-wods = [line.rstrip('\n') for line in open("WODS.txt")]
+
+file = open("WODS.txt")
+
+wods = [line.rstrip('\n') for line in file.readlines() if line.strip()]
 
 wod = random.choice(wods)
 
